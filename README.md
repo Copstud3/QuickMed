@@ -1,10 +1,10 @@
-# `QuickMed Website`
+# QuickMed Website
 
-`QuickMed Website` is a responsive and modern web application built with `React` and `Tailwind CSS`. It is designed for healthcare providers, offering seamless navigation, visually appealing `UI` components, and a responsive design that adapts to all devices. The website includes sections like a `hero banner`, `pricing plans`, and a responsive `navigation bar`, along with interactive elements like a `"Back to Top"` button and an accordion `FAQ` section.
+QuickMed Website is a responsive and modern web application built with `React` and `Tailwind CSS`. It is designed for healthcare providers, offering seamless navigation, visually appealing `UI` components, and a responsive design that adapts to all devices. The website includes sections like a `hero banner`, `pricing plans`, and a responsive `navigation bar`, along with interactive elements like a `"Back to Top"` button and an accordion `FAQ` section.
 
 ---
 
-## `Table of Contents`
+## Table of Contents
 
 - [`Features`](#features)
 - [`Technologies Used`](#technologies-used)
@@ -46,8 +46,8 @@
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/quickmed-website.git
-   cd quickmed-website
+   git clone https://github.com/Copstud3/QuickMed.git
+   cd QuickMed
    ```
 
 2. Install dependencies:
