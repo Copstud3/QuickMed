@@ -1,6 +1,3 @@
-Here is the `README.md` with every word in Markdown code and additional details included:
-
-```markdown
 # `QuickMed Website`
 
 `QuickMed Website` is a responsive and modern web application built with `React` and `Tailwind CSS`. It is designed for healthcare providers, offering seamless navigation, visually appealing `UI` components, and a responsive design that adapts to all devices. The website includes sections like a `hero banner`, `pricing plans`, and a responsive `navigation bar`, along with interactive elements like a `"Back to Top"` button and an accordion `FAQ` section.
