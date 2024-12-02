@@ -15,7 +15,7 @@ const PriceCard = ({
   return (
     <div
       className={`relative flex flex-col p-[32px] text-left bg-ash rounded-[32px] border cursor-pointer transition-all duration-300 ${
-        isSelected ? "border-purple-500 scale-105" : "border-[#E0E2E6]"
+        isSelected ? "border-purple scale-105" : "border-[#E0E2E6]"
       }`}
       onClick={onSelect}
     >
