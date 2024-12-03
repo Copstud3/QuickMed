@@ -38,7 +38,7 @@ const Nav = () => {
         <img
           id="hamburger-icon"
           src={hamburger}
-          className="lg:hidden justify-end cursor-pointer"
+          className="hidden max-md:block justify-end cursor-pointer"
           width={25}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           alt="Hamburger Icon"
@@ -66,7 +66,7 @@ const Nav = () => {
           >
             Log in
           </a>
-          <Button label="Sign Up" className="bg-purple-gradient" />
+          <Button label="Sign Up" className="bg-purple-gradient max-sm:text-sm" />
         </div>
       </nav>
 
