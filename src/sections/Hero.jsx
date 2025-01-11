@@ -5,7 +5,7 @@ import { heroLogos } from "../constants";
 
 const Hero = () => {
   return (
-    <section id="home" className="my-10">
+    <section id="home" className="my-10 mx-8">
       {/* Section 1: Text and Leaf Icons */}
       <div className="text-center">
         {/* Flex container for leaf icons and text */}
@@ -21,7 +21,7 @@ const Hero = () => {
         </h2>
         
         {/* Subtext */}
-        <p className="mx-[20px] sm:mx-[50px] lg:mx-[512px] font-400 text-[16px] max-sm:text-[14px] max-sm:mt-3 text-slate-gray mb-4">
+        <p className="mx-[20px] sm:mx-[50px] font-400 text-[16px] max-sm:text-[14px] max-sm:mt-3 text-slate-gray mb-4">
           Our easy-to-use clinical documentation tool helps you spend less time typing and more time with patients.
         </p>
         

@@ -3,11 +3,11 @@ import Button from '../components/Button'
 
 const Demo = () => {
   return (
-    <section className='text-center bg-dp-gradient rounded-[36px]'>
-      <div>
-        <h2 className='text-white text-5xl lg:pt-[70px] lg:mx-[500px] lg:leading-[64px] font-semibold mb-4 max-md:pt-10 max-md:text-2xl'>Ready to Secure Your Patient Data?</h2>
-        <p className='text-slate-gray mb-8 max-md:mx-8'>Start your 30-day free trial today. No credit card required.</p>
-        <Button label="Book a Demo" padding className="bg-purple-gradient max-md:mb-10"/>
+    <section className='text-center bg-dp-gradient rounded-[36px] py-10 px-3 xl:py-20 xl:px-24 mx-10 xl:mx-[200px]'>
+      <div className='flex flex-col justify-center items-center gap-3 -mb-20'>
+        <h2 className='text-white text-2xl md:text-4xl xl:text-6xl md:font-medium'>Ready to Secure Your Patient Data?</h2>
+        <p className='text-slate-gray'>Start your 30-day free trial today. No credit card required.</p>
+        <Button label="Book a Demo" padding className="bg-purple-gradient"/>
       </div>
     </section>
   )

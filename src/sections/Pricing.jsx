@@ -6,26 +6,28 @@ const Pricing = () => {
   const [select, setSelect] = useState(1);
 
   const handleCardSelect = (index) => {
-    setSelect(index); // Update selected card index
+    setSelect(index);
   };
 
   return (
-    <section id="pricing" className="text-center py-10 lg:mx-[150px] max-sm:mt-[-40px]">
-      <div className="lg:mx-[480px]">
+    <section id="pricing" className="container mx-auto px-4 py-10 max-w-7xl">
+      <div className="max-w-2xl mx-auto text-center mb-16">
         <h2 className="text-navy text-4xl font-[600]">Pricing</h2>
-        <p className="text-slate-gray text-[18px] mt-4 mb-16">
+        <p className="text-slate-gray text-[18px] mt-4">
           Find the right pricing option to suit your business or practice
         </p>
       </div>
-      <div className="mt-16 grid lg:grid-cols-3 gap-[32px]">
+      
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 justify-items-center max-w-6xl mx-auto">
         {pricing.map((price, index) => (
-          <PriceCard
-            {...price}
-            isSelected={select === index}
-            onSelect={() => handleCardSelect(index)}
-            isMostPopular={index === 1} // Highlight "Professional" plan
-            key={index}
-          />
+          <div key={index} className="w-full max-w-md">
+            <PriceCard
+              {...price}
+              isSelected={select === index}
+              onSelect={() => handleCardSelect(index)}
+              isMostPopular={index === 1}
+            />
+          </div>
         ))}
       </div>
     </section>

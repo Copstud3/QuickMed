@@ -10,7 +10,7 @@ const Faq = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index)); // Toggle open/close
   };
   return (
-    <section id="faq" className="text-center py-10 max-md:mt-[-80px]">
+    <section id="faq" className="text-center py-10 mx-10 xl:-mx-20">
       {/* Heading Section */}
       <div className="">
         <h2 className="text-navy text-4xl font-semibold">Got Questions? We’ve Got Answers!</h2>

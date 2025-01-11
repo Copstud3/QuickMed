@@ -8,12 +8,12 @@ export default function App() {
   useEffect(() => {
     AOS.init({
       duration: 2500, // Animation duration
-      easing: 'ease-out-back', // Easing function
-      once: false, // Animation happens only once
+      easing: 'ease-out', // Easing function
+      once: true, // Animation happens only once
     });
   }, []);
   return (
-    <main className="mx-[80px] font-inter flex-col justify-center items-center max-md:mx-[30px] max-md:max-w-full" >
+    <main className="font-inter w-screen mx-auto md:max-w-screen-md xl:max-w-screen-xl" >
       <Nav />
       <section className="" data-aos="fade-up">
         <Hero />

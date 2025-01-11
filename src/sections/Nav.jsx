@@ -7,7 +7,6 @@ import { navLinks } from "../constants";
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close the menu when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       const dropdown = document.getElementById("dropdown-menu");
@@ -28,24 +27,37 @@ const Nav = () => {
 
   return (
     <header className="h-[96px] relative">
-      <nav className="flex pt-[23px] justify-between items-center font-[500]">
+      <nav className="mx-10 xl:max-w-7xl xl:mx-auto flex pt-[23px] justify-between items-center font-[500]">
         {/* Logo */}
         <a href="/">
           <img src={QuickMedLogo} alt="Logo" width={300} />
         </a>
 
         {/* Hamburger Icon */}
-        <img
-          id="hamburger-icon"
-          src={hamburger}
-          className="hidden max-md:block justify-end cursor-pointer"
-          width={25}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          alt="Hamburger Icon"
-        />
+        <div className="hidden max-md:block justify-end cursor-pointer relative w-6 h-6">
+          <button
+            id="hamburger-icon"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="w-full h-full"
+          >
+            <span className={`absolute w-full h-0.5 bg-black transition-all duration-300 ${
+              isMenuOpen 
+                ? "top-1/2 -translate-y-1/2 rotate-45" 
+                : "top-0"
+            }`} />
+            <span className={`absolute w-full h-0.5 bg-black top-1/2 -translate-y-1/2 transition-opacity duration-300 ${
+              isMenuOpen ? "opacity-0" : "opacity-100"
+            }`} />
+            <span className={`absolute w-full h-0.5 bg-black transition-all duration-300 ${
+              isMenuOpen 
+                ? "bottom-1/2 translate-y-1/2 -rotate-45" 
+                : "bottom-0"
+            }`} />
+          </button>
+        </div>
 
         {/* Desktop Menu */}
-        <ul className="flex justify-between items-center gap-10 mr-[6%] max-md:hidden">
+        <ul className="justify-between items-center gap-10 mr-[6%] hidden xl:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
@@ -71,34 +83,36 @@ const Nav = () => {
       </nav>
 
       {/* Dropdown Menu for Mobile */}
-      {isMenuOpen && (
-        <div
-          id="dropdown-menu"
-          className="absolute top-[96px] right-0 bg-white shadow-lg rounded-lg py-4 px-6 w-[80%] lg:hidden z-50"
-        >
-          <ul className="flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="text-slate-gray font-[500] hover:text-slate-400 transition-all duration-300"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col mt-6 gap-4">
-            <a
-              href="/"
-              className="text-slate-gray text-center font-[500] hover:text-slate-400 transition-all duration-300"
-            >
-              Log in
-            </a>
-            <Button label="Sign Up" className="bg-purple-gradient" />
-          </div>
+      <div
+        id="dropdown-menu"
+        className={`fixed top-[65px] right-0 bg-white shadow-lg rounded-lg py-4 px-6 w-[80%] lg:hidden z-50 transform transition-all duration-300 ease-in-out ${
+          isMenuOpen 
+            ? "translate-x-0 opacity-100" 
+            : "translate-x-full opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col gap-6">
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                className="text-slate-gray font-[500] hover:text-slate-400 transition-all duration-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-col mt-6 gap-4">
+          <a
+            href="/"
+            className="text-slate-gray text-center font-[500] hover:text-slate-400 transition-all duration-300"
+          >
+            Log in
+          </a>
+          <Button label="Sign Up" className="bg-purple-gradient" />
         </div>
-      )}
+      </div>
     </header>
   );
 };

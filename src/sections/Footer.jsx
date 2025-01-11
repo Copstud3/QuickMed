@@ -4,9 +4,10 @@ import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-between items-start pt-24">
-      <div className="flex flex-row justify-evenly items-start lg:gap-[200px] pb-12 max-md:flex-col max-md:gap-6">
-        <img src={QuickMedLogo} className="mr-[180px]" />
+    <footer className="pt-24 mx-10 md:mx-3 xl:-mx-36 mt-20">
+      <div className="flex items-start md:justify-between pb-12 flex-col md:flex-row gap-6">
+        <img src={QuickMedLogo} />
+        <div className="flex gap-9 justify-between flex-col md:flex-row">
         {footerLinks.map((section) => (
           <div key={section}>
             <h4 className="text-base leading-normal font-medium mb-5 ">
@@ -23,9 +24,10 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <hr className="border w-full lg:mb-8 max-md:mb-4" />
+      <hr className="border w-full md:mb-8 max-md:mb-4" />
       <div className="mb-16 flex justify-between items-center w-full max-sm:flex-col max-sm:gap-4 max-md:mb-8">
         {/* Text section */}
 
@@ -47,8 +49,8 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="pb-8">
-        <p className="lg:text-xl text-slate-gray">
+      <div className="pb-8 md:ml-0">
+        <p className="lg:text-xl text-slate-gray ">
           Designed by{" "}
           <a href="https://x.com/ayodeji_law" className="text-black hover:text-purple active:text-purple">
             Ayolaw
